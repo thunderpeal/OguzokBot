@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenv / uv
+.venv/
+.uv/
+*.egg-info
+.eggs/
+
+# IDE / Editors
+.vscode/
+.idea/
+
+# Local data & logs
+logs/
+*.log
+
+# Don’t bake local envs into image
+.env
+.env.*

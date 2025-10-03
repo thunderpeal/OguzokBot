@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Virtualenv / uv
+.venv/
+.uv/
+.venv*/
+env/
+venv/
+*.egg-info/
+.eggs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project data
+data/*.index
+data/*.meta.json
+data/*.lock
+
+# Env files
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Docker artifacts
+*.pid

@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    container_name: tg-quote-bot
+    env_file:
+      - .env
+    volumes:
+      - ./data:/workspace/data
+    restart: unless-stopped

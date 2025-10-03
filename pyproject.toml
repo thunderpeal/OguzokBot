@@ -1,0 +1,52 @@
+[project]
+name = "oguzokbot"
+version = "0.1.0"
+description = "Telegram-бот для подбора цитат Макса Лаврова из сериала 'Кухня' на основе постов канала"
+authors = [
+    { name = "thunderpeal", email = "pealsgun@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "openai>=1.40.0",
+    "faiss-cpu==1.8.0",
+    "numpy==1.26.4",
+    "pydantic==2.8.2",
+    "rapidfuzz==3.9.6",
+    "orjson==3.10.7",
+    "python-dotenv>=1.1.1",
+    "aiogram>=3.22.0",
+    "packaging>=25.0",
+]
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.setuptools.package-dir]
+app = "app"
+
+[tool.setuptools.exclude-package-data]
+"*" = ["data/*"]
+
+[project.optional-dependencies]
+linux = ["uvloop==0.20.0"]
+dev = [
+    "black",
+    "ruff",
+    "mypy",
+    "pytest",
+]
+
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
